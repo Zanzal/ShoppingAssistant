@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Generated using X-Studio -->
+<language id="44">
+
+	<page id="2008" title="" desc="" voice="no">
+		<t id="420">COMMAND_SHOPPING_ASSISTANT</t>
+	</page>
+
+	<page id="2010" title="" desc="" voice="no">
+		<t id="420">\33OShopping Assistant\33X</t>
+	</page>
+
+	<page id="2011" title="" desc="" voice="no">
+		<t id="420">Shop</t>
+	</page>
+
+	<page id="2022" title="" desc="" voice="no">
+		<t id="420">Automatic purchasing of desired goods.</t>
+	</page>
+
+	<page id="8101" title="" desc="" voice="no">
+		<t id="50">Shopping Drone</t>
+	</page>
+
+	<page id="8104" title="" desc="" voice="no">
+		<t id="1">Shopping Assistant</t>
+		<t id="2">Shopping List</t>
+		<t id="3">Item Quantity</t>
+		<t id="4">Add Shopping Item</t>
+		<t id="5">Commands</t>
+		<t id="6">\33GBegin Shopping\33X</t>
+		<t id="7">Select Ware</t>
+		<t id="8">Current Qty</t>
+		<t id="9">Cannot use this command on the player`s ship.</t>
+		<t id="10">Completion Options</t>
+		<t id="11">When Finished Dock At</t>
+		<t id="12">When Finished Notify Me</t>
+		<t id="13">\33G%s\33X</t>
+		<t id="14">Select Final Destination</t>
+		<t id="15">\33Y%s\33X</t>
+		<t id="16">Shopping Assistant: Failed to purchase all the items</t>
+		<t id="17">Shopping Assistant: Command complete</t>
+		<t id="18">Clear Shopping List</t>
+	</page>
+</language>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated using X-Studio -->
+<project version="1">
+	<document type="script">C:\X3AP\XRM\addon\scripts\plugin.zanzal.shopping.buyware.xml</document>
+	<document type="script">C:\X3AP\XRM\addon\scripts\plugin.zanzal.shopping.command.xml</document>
+	<document type="script">C:\X3AP\XRM\addon\scripts\plugin.zanzal.shopping.sectorbuywithdrones.xml</document>
+	<document type="script">C:\X3AP\XRM\addon\scripts\plugin.zanzal.shopping.refuel.xml</document>
+	<document type="script">C:\X3AP\XRM\addon\scripts\plugin.zanzal.shopping.drone.buyware.xml</document>
+	<document type="script">C:\X3AP\XRM\addon\scripts\setup.zanzal.shoppingassistant.xml</document>
+	<document type="script">C:\X3AP\XRM\addon\scripts\plugin.zanzal.shoppingassistant.main.xml</document>
+	<document type="script">C:\X3AP\XRM\addon\scripts\plugin.zanzal.shoppingassistant.menu.xml</document>
+	<document type="script">C:\X3AP\XRM\addon\scripts\plugin.zanzal.jumptosectornear.xml</document>
+	<document type="script">C:\X3AP\XRM\addon\scripts\plugin.zanzal.threatassessment.xml</document>
+	<document type="script">C:\X3AP\XRM\addon\scripts\plugin.zanzal.defensivewait.xml</document>
+	<document type="script">C:\X3AP\XRM\addon\scripts\plugin.zanzal.drone.followhomebase.xml</document>
+	<document type="script">C:\X3AP\XRM\addon\scripts\plugin.zanzal.drone.recall.xml</document>
+	<document type="script">C:\X3AP\XRM\addon\scripts\lib.zanzal.menu.xml</document>
+	<document type="script">C:\X3AP\XRM\addon\scripts\lib.zanzal.ismenuopen.xml</document>
+	<document type="script">C:\X3AP\XRM\addon\scripts\plugin.zanzal.selectwaretobuy.xml</document>
+	<document type="script">C:\X3AP\XRM\addon\scripts\lib.zanzal.createmenu.xml</document>
+	<document type="script">C:\X3AP\XRM\addon\scripts\plugin.zanzal.shoppingassistant.menu.add.xml</document>
+	<document type="script">C:\X3AP\XRM\addon\scripts\plugin.zanzal.shoppingassistant.menu.update.xml</document>
+	<document type="script">C:\X3AP\XRM\addon\scripts\plugin.zanzal.shoppingassistant.menu.addtoshoppinglist.xml</document>
+	<document type="script">C:\X3AP\XRM\addon\scripts\plugin.zanzal.shopping.getfreecargospaceforware.xml</document>
+	<document type="script">C:\X3AP\XRM\addon\scripts\plugin.zanzal.shoppingassistant.menu.updatemenumax.xml</document>
+	<document type="script">C:\X3AP\XRM\addon\scripts\plugin.zanzal.shoppingassistant.menu.selectstation.xml</document>
+	<document type="script">C:\X3AP\XRM\addon\scripts\plugin.zanzal.waitfordrones.xml</document>
+	<document type="script">C:\X3AP\XRM\addon\scripts\plugin.zanzal.initblacklist.xml</document>
+	<document type="language">C:\X3AP\XRM\addon\t\8104-L044.xml</document>
+	<document type="language">C:\X3AP\XRM\addon\t\8104-L049.xml</document>
+</project>
