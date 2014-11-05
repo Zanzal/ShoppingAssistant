@@ -3,7 +3,7 @@
 <!-- Generated using X-Studio -->
 <script>
 	<name>plugin.zanzal.shoppingassistant.menu.addtoshoppinglist</name>
-	<version>1</version>
+	<version>3</version>
 	<engineversion>50</engineversion>
 	<description></description>
 	<arguments>
@@ -459,21 +459,22 @@
 			<text> </text>
 			<var>$current</var>
 		</line>
-		<line linenr="051" indent="">
+		<line linenr="051" indent="" />
+		<line linenr="052" indent="">
 			<var>$left.text</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
 			<text>'Minimum'</text>
 		</line>
-		<line linenr="052" indent="">
+		<line linenr="053" indent="">
 			<var>$right.text</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
 			<text>'Maximum'</text>
 		</line>
-		<line linenr="053" indent="">
+		<line linenr="054" indent="">
 			<var>$updateware.params</var>
 			<text> </text>
 			<text>=</text>
@@ -487,7 +488,7 @@
 			<text>=</text>
 			<var>6</var>
 		</line>
-		<line linenr="054" indent="">
+		<line linenr="055" indent="">
 			<var>$updateware.params</var>
 			<text>[</text>
 			<var>0</var>
@@ -497,7 +498,7 @@
 			<text> </text>
 			<var>$menu</var>
 		</line>
-		<line linenr="055" indent="">
+		<line linenr="056" indent="">
 			<var>$updateware.params</var>
 			<text>[</text>
 			<var>1</var>
@@ -507,7 +508,7 @@
 			<text> </text>
 			<var>$shopping.list</var>
 		</line>
-		<line linenr="056" indent="">
+		<line linenr="057" indent="">
 			<var>$updateware.params</var>
 			<text>[</text>
 			<var>2</var>
@@ -517,7 +518,7 @@
 			<text> </text>
 			<var>$shopping.menu.base</var>
 		</line>
-		<line linenr="057" indent="">
+		<line linenr="058" indent="">
 			<var>$updateware.params</var>
 			<text>[</text>
 			<var>3</var>
@@ -527,7 +528,7 @@
 			<text> </text>
 			<var>$refobj</var>
 		</line>
-		<line linenr="058" indent="">
+		<line linenr="059" indent="">
 			<var>$updateware.params</var>
 			<text>[</text>
 			<var>4</var>
@@ -537,7 +538,7 @@
 			<text> </text>
 			<var>$tmp</var>
 		</line>
-		<line linenr="059" indent="">
+		<line linenr="060" indent="">
 			<var>$updateware.params</var>
 			<text>[</text>
 			<var>5</var>
@@ -547,7 +548,7 @@
 			<text> </text>
 			<var>$ware</var>
 		</line>
-		<line linenr="060" indent="">
+		<line linenr="061" indent="">
 			<var>$ret</var>
 			<text> </text>
 			<text>=</text>
@@ -579,7 +580,7 @@
 			<text>=</text>
 			<var>$updateware.params</var>
 		</line>
-		<line linenr="061" indent="">
+		<line linenr="062" indent="">
 			<text>add</text>
 			<text> </text>
 			<text>trade</text>
@@ -634,7 +635,7 @@
 			<text>=</text>
 			<var>$right.text</var>
 		</line>
-		<line linenr="062" indent="">
+		<line linenr="063" indent="">
 			<var>$menu.item</var>
 			<text> </text>
 			<text>=</text>
@@ -644,7 +645,7 @@
 			<var>0</var>
 			<text>]</text>
 		</line>
-		<line linenr="063" indent="">
+		<line linenr="064" indent="">
 			<var>$updateware.params</var>
 			<text>[</text>
 			<var>4</var>
@@ -654,7 +655,7 @@
 			<text> </text>
 			<var>$menu.item</var>
 		</line>
-		<line linenr="064" indent="">
+		<line linenr="065" indent="">
 			<text>insert</text>
 			<text> </text>
 			<var>$menu.item</var>
@@ -671,7 +672,7 @@
 			<text> </text>
 			<var>$idx</var>
 		</line>
-		<line linenr="065" indent="">
+		<line linenr="066" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>null</var>
@@ -682,7 +683,7 @@
 			<sval type="string" val="plugin.zanzal.shoppingassistant.menu.addtoshoppinglist" />
 			<sval type="int" val="50" />
 			<sval type="string" val="" />
-			<sval type="int" val="1" />
+			<sval type="int" val="3" />
 			<sval type="int" val="0" />
 			<sval type="array" size="23">
 				<sval type="string" val="menu" />
@@ -1190,7 +1191,7 @@
 					<sval type="string" val="" />
 				</sval>
 			</sval>
-			<sval type="array" size="15">
+			<sval type="array" size="16">
 				<sval type="array" size="3">
 					<sval type="int" val="0" />
 					<sval type="int" val="1" />
@@ -1255,6 +1256,10 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="35" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="37" />
 					<sval type="int" val="2" />
 				</sval>
 			</sval>
