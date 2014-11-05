@@ -11,7 +11,7 @@
 	</arguments>
 	<sourcetext>
 		<line linenr="001" indent="">
-			<comment>*************************************************</comment>
+			<comment>* ************************************************</comment>
 		</line>
 		<line linenr="002" indent="">
 			<comment>* SCRIPT NAME: lib.zanzal.ismenuopen.xml</comment>
@@ -26,7 +26,7 @@
 			<comment>* AUTHOR: Zanzal          DATE: 25 January 2014</comment>
 		</line>
 		<line linenr="006" indent="">
-			<comment>*************************************************</comment>
+			<comment>* ************************************************</comment>
 		</line>
 		<line linenr="007" indent="">
 			<var>$result</var>
@@ -45,6 +45,7 @@
 		</line>
 		<line linenr="009" indent="&#160;" interruptable="@">
 			<text>=</text>
+			<text> </text>
 			<text>wait</text>
 			<text> </text>
 			<var>100</var>
@@ -61,10 +62,60 @@
 			<var>1</var>
 			<text>]</text>
 		</line>
-		<line linenr="011" indent="">
+		<line linenr="011" indent="&#160;" />
+		<line linenr="012" indent="&#160;">
+			<comment>* Player can activate jumpdrive, then open window, script should never exit because the window script is aborted</comment>
+		</line>
+		<line linenr="013" indent="&#160;">
+			<var>$player.sector</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[PLAYERSHIP]</var>
+			<text> </text>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>sector</text>
+		</line>
+		<line linenr="014" indent="&#160;">
+			<var>$saved.player.sector</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$handle</var>
+			<text>[</text>
+			<var>7</var>
+			<text>]</text>
+		</line>
+		<line linenr="015" indent="&#160;">
+			<text>if</text>
+			<text> </text>
+			<var>$player.sector</var>
+			<text> </text>
+			<text>!=</text>
+			<text> </text>
+			<var>$saved.player.sector</var>
+		</line>
+		<line linenr="016" indent="&#160;&#160;">
+			<var>$result</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="017" indent="&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="012" indent="">
+		<line linenr="018" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="019" indent="" />
+		<line linenr="020" indent="" />
+		<line linenr="021" indent="" />
+		<line linenr="022" indent="" />
+		<line linenr="023" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>$result</var>
@@ -77,11 +128,13 @@
 			<sval type="string" val="" />
 			<sval type="int" val="1" />
 			<sval type="int" val="0" />
-			<sval type="array" size="2">
+			<sval type="array" size="4">
 				<sval type="string" val="handle" />
 				<sval type="string" val="result" />
+				<sval type="string" val="player.sector" />
+				<sval type="string" val="saved.player.sector" />
 			</sval>
-			<sval type="array" size="5">
+			<sval type="array" size="9">
 				<sval type="array" size="6">
 					<sval type="int" val="129" />
 					<sval type="int" val="1" />
@@ -92,7 +145,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610611709" />
+					<sval type="int" val="-1610610685" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="1" />
@@ -113,6 +166,44 @@
 					<sval type="int" val="4" />
 					<sval type="int" val="1" />
 				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="703" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="3" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="129" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="4" />
+					<sval type="int" val="7" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610610685" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="15" />
+					<sval type="int" val="1" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
 				<sval type="array" size="3">
 					<sval type="int" val="103" />
 					<sval type="int" val="131074" />
@@ -125,7 +216,7 @@
 					<sval type="string" val="" />
 				</sval>
 			</sval>
-			<sval type="array" size="7">
+			<sval type="array" size="14">
 				<sval type="array" size="3">
 					<sval type="int" val="0" />
 					<sval type="int" val="1" />
@@ -158,7 +249,36 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
 					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Player can activate jumpdrive, then open window, script should never exit because the window script is aborted" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="8" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="8" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="8" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="8" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="8" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="8" />
+					<sval type="int" val="2" />
 				</sval>
 			</sval>
 			<sval type="int" val="0" />

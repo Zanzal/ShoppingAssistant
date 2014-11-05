@@ -167,12 +167,9 @@
 			<text>=</text>
 			<text> </text>
 			<var>$refobj</var>
-			<text> </text>
 			<text>-&gt;</text>
 			<text> </text>
 			<text>get</text>
-			<text> </text>
-			<text>true</text>
 			<text> </text>
 			<text>amount</text>
 			<text> </text>
@@ -826,7 +823,7 @@
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="6">
-					<sval type="int" val="619" />
+					<sval type="int" val="618" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="3" />
 					<sval type="int" val="13" />

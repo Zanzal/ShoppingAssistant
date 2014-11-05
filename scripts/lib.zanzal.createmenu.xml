@@ -32,6 +32,19 @@
 			<comment>* ************************************************</comment>
 		</line>
 		<line linenr="007" indent="">
+			<var>$player.sector</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[PLAYERSHIP]</var>
+			<text> </text>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>sector</text>
+		</line>
+		<line linenr="008" indent="">
 			<var>$handle</var>
 			<text> </text>
 			<text>=</text>
@@ -43,12 +56,12 @@
 			<text> </text>
 			<text>size</text>
 			<text>=</text>
-			<var>7</var>
-		</line>
-		<line linenr="008" indent="">
-			<comment>* Result</comment>
+			<var>8</var>
 		</line>
 		<line linenr="009" indent="">
+			<comment>* Result</comment>
+		</line>
+		<line linenr="010" indent="">
 			<var>$handle</var>
 			<text>[</text>
 			<var>0</var>
@@ -58,10 +71,10 @@
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="010" indent="">
+		<line linenr="011" indent="">
 			<comment>* Menu Open</comment>
 		</line>
-		<line linenr="011" indent="">
+		<line linenr="012" indent="">
 			<var>$handle</var>
 			<text>[</text>
 			<var>1</var>
@@ -71,10 +84,10 @@
 			<text> </text>
 			<var>[TRUE]</var>
 		</line>
-		<line linenr="012" indent="">
+		<line linenr="013" indent="">
 			<comment>* Menu Large</comment>
 		</line>
-		<line linenr="013" indent="">
+		<line linenr="014" indent="">
 			<var>$handle</var>
 			<text>[</text>
 			<var>2</var>
@@ -84,10 +97,10 @@
 			<text> </text>
 			<var>$large.menu</var>
 		</line>
-		<line linenr="014" indent="">
+		<line linenr="015" indent="">
 			<comment>* Menu Items</comment>
 		</line>
-		<line linenr="015" indent="">
+		<line linenr="016" indent="">
 			<var>$handle</var>
 			<text>[</text>
 			<var>3</var>
@@ -97,10 +110,10 @@
 			<text> </text>
 			<var>$menu.items</var>
 		</line>
-		<line linenr="016" indent="">
+		<line linenr="017" indent="">
 			<comment>* Menu title</comment>
 		</line>
-		<line linenr="017" indent="">
+		<line linenr="018" indent="">
 			<var>$handle</var>
 			<text>[</text>
 			<var>4</var>
@@ -110,10 +123,10 @@
 			<text> </text>
 			<var>$title</var>
 		</line>
-		<line linenr="018" indent="">
+		<line linenr="019" indent="">
 			<comment>* Menu heading</comment>
 		</line>
-		<line linenr="019" indent="">
+		<line linenr="020" indent="">
 			<var>$handle</var>
 			<text>[</text>
 			<var>5</var>
@@ -123,10 +136,10 @@
 			<text> </text>
 			<var>$heading</var>
 		</line>
-		<line linenr="020" indent="">
+		<line linenr="021" indent="">
 			<comment>* Maxoptions</comment>
 		</line>
-		<line linenr="021" indent="">
+		<line linenr="022" indent="">
 			<var>$handle</var>
 			<text>[</text>
 			<var>6</var>
@@ -136,8 +149,21 @@
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="022" indent="" />
-		<line linenr="023" indent="" interruptable="@">
+		<line linenr="023" indent="">
+			<comment>* Insurance against window close never getting noticed.</comment>
+		</line>
+		<line linenr="024" indent="">
+			<var>$handle</var>
+			<text>[</text>
+			<var>7</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$player.sector</var>
+		</line>
+		<line linenr="025" indent="" />
+		<line linenr="026" indent="" interruptable="@">
 			<text>START</text>
 			<text> </text>
 			<var>$null</var>
@@ -155,8 +181,8 @@
 			<text>=</text>
 			<var>$handle</var>
 		</line>
-		<line linenr="024" indent="" />
-		<line linenr="025" indent="">
+		<line linenr="027" indent="" />
+		<line linenr="028" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>$handle</var>
@@ -169,25 +195,32 @@
 			<sval type="string" val="" />
 			<sval type="int" val="1" />
 			<sval type="int" val="0" />
-			<sval type="array" size="6">
+			<sval type="array" size="7">
 				<sval type="string" val="title" />
 				<sval type="string" val="heading" />
 				<sval type="string" val="menu.items" />
 				<sval type="string" val="large.menu" />
+				<sval type="string" val="player.sector" />
 				<sval type="string" val="handle" />
 				<sval type="string" val="null" />
 			</sval>
-			<sval type="array" size="10">
+			<sval type="array" size="12">
+				<sval type="array" size="4">
+					<sval type="int" val="703" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+				</sval>
 				<sval type="array" size="4">
 					<sval type="int" val="128" />
+					<sval type="int" val="5" />
 					<sval type="int" val="4" />
-					<sval type="int" val="4" />
-					<sval type="int" val="7" />
+					<sval type="int" val="8" />
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="130" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="4" />
+					<sval type="int" val="5" />
 					<sval type="int" val="4" />
 					<sval type="int" val="0" />
 					<sval type="int" val="0" />
@@ -196,7 +229,7 @@
 				<sval type="array" size="7">
 					<sval type="int" val="130" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="4" />
+					<sval type="int" val="5" />
 					<sval type="int" val="4" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131075" />
@@ -205,7 +238,7 @@
 				<sval type="array" size="7">
 					<sval type="int" val="130" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="4" />
+					<sval type="int" val="5" />
 					<sval type="int" val="4" />
 					<sval type="int" val="2" />
 					<sval type="int" val="131074" />
@@ -214,7 +247,7 @@
 				<sval type="array" size="7">
 					<sval type="int" val="130" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="4" />
+					<sval type="int" val="5" />
 					<sval type="int" val="4" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
@@ -223,7 +256,7 @@
 				<sval type="array" size="7">
 					<sval type="int" val="130" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="4" />
+					<sval type="int" val="5" />
 					<sval type="int" val="4" />
 					<sval type="int" val="4" />
 					<sval type="int" val="131074" />
@@ -232,7 +265,7 @@
 				<sval type="array" size="7">
 					<sval type="int" val="130" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="4" />
+					<sval type="int" val="5" />
 					<sval type="int" val="4" />
 					<sval type="int" val="5" />
 					<sval type="int" val="131074" />
@@ -241,26 +274,35 @@
 				<sval type="array" size="7">
 					<sval type="int" val="130" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="4" />
+					<sval type="int" val="5" />
 					<sval type="int" val="4" />
 					<sval type="int" val="6" />
 					<sval type="int" val="0" />
 					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="130" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="7" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="8">
 					<sval type="int" val="102" />
 					<sval type="string" val="lib.zanzal.menu" />
 					<sval type="int" val="-2147483646" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="5" />
+					<sval type="int" val="6" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="4" />
+					<sval type="int" val="5" />
 				</sval>
 				<sval type="array" size="3">
 					<sval type="int" val="103" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="4" />
+					<sval type="int" val="5" />
 				</sval>
 			</sval>
 			<sval type="array" size="4">
@@ -281,7 +323,7 @@
 					<sval type="string" val="" />
 				</sval>
 			</sval>
-			<sval type="array" size="15">
+			<sval type="array" size="16">
 				<sval type="array" size="3">
 					<sval type="int" val="0" />
 					<sval type="int" val="1" />
@@ -313,46 +355,51 @@
 					<sval type="string" val="************************************************" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="1" />
+					<sval type="int" val="2" />
 					<sval type="int" val="1" />
 					<sval type="string" val="Result" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="2" />
+					<sval type="int" val="3" />
 					<sval type="int" val="1" />
 					<sval type="string" val="Menu Open" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="3" />
+					<sval type="int" val="4" />
 					<sval type="int" val="1" />
 					<sval type="string" val="Menu Large" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="4" />
+					<sval type="int" val="5" />
 					<sval type="int" val="1" />
 					<sval type="string" val="Menu Items" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="5" />
+					<sval type="int" val="6" />
 					<sval type="int" val="1" />
 					<sval type="string" val="Menu title" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="6" />
+					<sval type="int" val="7" />
 					<sval type="int" val="1" />
 					<sval type="string" val="Menu heading" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="7" />
+					<sval type="int" val="8" />
 					<sval type="int" val="1" />
 					<sval type="string" val="Maxoptions" />
 				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="9" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Insurance against window close never getting noticed." />
+				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="8" />
+					<sval type="int" val="10" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="9" />
+					<sval type="int" val="11" />
 					<sval type="int" val="2" />
 				</sval>
 			</sval>
