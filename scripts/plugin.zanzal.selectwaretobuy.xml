@@ -3,7 +3,7 @@
 <!-- Generated using X-Studio -->
 <script>
 	<name>plugin.zanzal.selectwaretobuy</name>
-	<version>1</version>
+	<version>2</version>
 	<engineversion>50</engineversion>
 	<description></description>
 	<arguments>
@@ -681,7 +681,7 @@
 		</line>
 		<line linenr="068" indent="&#160;&#160;">
 			<text>if</text>
-			<text>  </text>
+			<text> </text>
 			<var>$maintype</var>
 			<text> </text>
 			<text>==</text>
@@ -692,7 +692,7 @@
 			<text>do</text>
 			<text> </text>
 			<text>if</text>
-			<text>  </text>
+			<text> </text>
 			<var>$refobj</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -1180,7 +1180,6 @@
 			<text>if</text>
 			<text> </text>
 			<var>$race.station</var>
-			<text> </text>
 			<text>-&gt;</text>
 			<text> </text>
 			<text>is</text>
@@ -1191,9 +1190,8 @@
 			<text>if</text>
 			<text> </text>
 			<var>$refobj</var>
-			<text> </text>
 			<text>-&gt;</text>
-			<text>  </text>
+			<text> </text>
 			<text>is</text>
 			<text> </text>
 			<text>docking</text>
@@ -1203,13 +1201,11 @@
 			<text>at</text>
 			<text> </text>
 			<var>$race.station</var>
-			<text> </text>
 		</line>
 		<line linenr="124" indent="&#160;">
 			<text>if</text>
 			<text> </text>
 			<var>$race.station</var>
-			<text> </text>
 			<text>-&gt;</text>
 			<text> </text>
 			<text>is</text>
@@ -1228,7 +1224,6 @@
 			<text>=</text>
 			<text> </text>
 			<var>$race.station</var>
-			<text> </text>
 			<text>-&gt;</text>
 			<text> </text>
 			<text>get</text>
@@ -1411,15 +1406,28 @@
 			<var>$menu.section</var>
 		</line>
 		<line linenr="143" indent="&#160;&#160;&#160;&#160;&#160;">
-			<text>append</text>
+			<text>add</text>
 			<text> </text>
-			<var>$ware.item</var>
+			<text>custom</text>
+			<text> </text>
+			<text>menu</text>
+			<text> </text>
+			<text>item</text>
 			<text> </text>
 			<text>to</text>
 			<text> </text>
 			<text>array</text>
 			<text> </text>
 			<var>$menu.section</var>
+			<text>:</text>
+			<text> </text>
+			<text>text</text>
+			<text>=</text>
+			<var>$ware.item</var>
+			<text> </text>
+			<text>returnvalue</text>
+			<text>=</text>
+			<var>$ware.item</var>
 		</line>
 		<line linenr="144" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
 			<var>$ware.item.name</var>
@@ -1428,6 +1436,7 @@
 			<text> </text>
 			<text>sprintf</text>
 			<text>:</text>
+			<text> </text>
 			<text>fmt</text>
 			<text>=</text>
 			<text>'%s'</text>
@@ -2400,28 +2409,15 @@
 			<text>]</text>
 		</line>
 		<line linenr="239" indent="">
-			<text>add</text>
+			<text>append</text>
 			<text> </text>
-			<text>custom</text>
-			<text> </text>
-			<text>menu</text>
-			<text> </text>
-			<text>item</text>
+			<var>$menu.item</var>
 			<text> </text>
 			<text>to</text>
 			<text> </text>
 			<text>array</text>
 			<text> </text>
 			<var>$menu</var>
-			<text>:</text>
-			<text> </text>
-			<text>text</text>
-			<text>=</text>
-			<var>$menu.item</var>
-			<text> </text>
-			<text>returnvalue</text>
-			<text>=</text>
-			<var>$menu.item</var>
 		</line>
 		<line linenr="240" indent="">
 			<text>inc</text>
@@ -2441,7 +2437,7 @@
 			<sval type="string" val="plugin.zanzal.selectwaretobuy" />
 			<sval type="int" val="50" />
 			<sval type="string" val="" />
-			<sval type="int" val="1" />
+			<sval type="int" val="2" />
 			<sval type="int" val="2" />
 			<sval type="array" size="52">
 				<sval type="string" val="refobj" />
@@ -3465,10 +3461,12 @@
 					<sval type="int" val="131074" />
 					<sval type="int" val="25" />
 				</sval>
-				<sval type="array" size="5">
-					<sval type="int" val="135" />
+				<sval type="array" size="7">
+					<sval type="int" val="1447" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="25" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="38" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="38" />
 				</sval>
@@ -4107,12 +4105,10 @@
 					<sval type="int" val="131074" />
 					<sval type="int" val="49" />
 				</sval>
-				<sval type="array" size="7">
-					<sval type="int" val="1447" />
+				<sval type="array" size="5">
+					<sval type="int" val="135" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="22" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="51" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="51" />
 				</sval>
