@@ -3,7 +3,7 @@
 <!-- Generated using X-Studio -->
 <script>
 	<name>plugin.zanzal.shoppingassistant.menu.addtoshoppinglist</name>
-	<version>3</version>
+	<version>5</version>
 	<engineversion>50</engineversion>
 	<description></description>
 	<arguments>
@@ -457,7 +457,7 @@
 			<text> </text>
 			<text>+</text>
 			<text> </text>
-			<var>$current</var>
+			<var>$current.count</var>
 		</line>
 		<line linenr="051" indent="" />
 		<line linenr="052" indent="">
@@ -683,7 +683,7 @@
 			<sval type="string" val="plugin.zanzal.shoppingassistant.menu.addtoshoppinglist" />
 			<sval type="int" val="50" />
 			<sval type="string" val="" />
-			<sval type="int" val="3" />
+			<sval type="int" val="5" />
 			<sval type="int" val="0" />
 			<sval type="array" size="23">
 				<sval type="string" val="menu" />
@@ -1020,7 +1020,7 @@
 					<sval type="int" val="131074" />
 					<sval type="int" val="17" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="18" />
+					<sval type="int" val="13" />
 					<sval type="int" val="15" />
 					<sval type="int" val="11" />
 					<sval type="int" val="3" />

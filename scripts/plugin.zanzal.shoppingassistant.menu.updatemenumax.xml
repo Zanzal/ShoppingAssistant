@@ -3,7 +3,7 @@
 <!-- Generated using X-Studio -->
 <script>
 	<name>plugin.zanzal.shoppingassistant.menu.updatemenumax</name>
-	<version>1</version>
+	<version>17</version>
 	<engineversion>50</engineversion>
 	<description></description>
 	<arguments>
@@ -31,7 +31,15 @@
 		<line linenr="006" indent="">
 			<comment>* ************************************************</comment>
 		</line>
-		<line linenr="007" indent="">
+		<line linenr="007" indent="" />
+		<line linenr="008" indent="">
+			<var>$total.cost</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>0</var>
+		</line>
+		<line linenr="009" indent="">
 			<var>$shopping.idx</var>
 			<text> </text>
 			<text>=</text>
@@ -44,17 +52,17 @@
 			<text> </text>
 			<var>$shopping.list</var>
 		</line>
-		<line linenr="008" indent="&#160;">
+		<line linenr="010" indent="&#160;">
 			<text>while</text>
 			<text> </text>
 			<var>$shopping.idx</var>
 		</line>
-		<line linenr="009" indent="&#160;">
+		<line linenr="011" indent="&#160;">
 			<text>dec</text>
 			<text> </text>
 			<var>$shopping.idx</var>
 		</line>
-		<line linenr="010" indent="&#160;">
+		<line linenr="012" indent="&#160;">
 			<var>$shopping.item</var>
 			<text> </text>
 			<text>=</text>
@@ -64,7 +72,7 @@
 			<var>$shopping.idx</var>
 			<text>]</text>
 		</line>
-		<line linenr="011" indent="&#160;">
+		<line linenr="013" indent="&#160;">
 			<var>$menu.item.idx</var>
 			<text> </text>
 			<text>=</text>
@@ -75,7 +83,7 @@
 			<text> </text>
 			<var>$shopping.menu.base</var>
 		</line>
-		<line linenr="012" indent="&#160;">
+		<line linenr="014" indent="&#160;">
 			<var>$menu.item</var>
 			<text> </text>
 			<text>=</text>
@@ -85,11 +93,8 @@
 			<var>$menu.item.idx</var>
 			<text>]</text>
 		</line>
-		<line linenr="013" indent="&#160;" />
-		<line linenr="014" indent="&#160;">
-			<comment>* Reset current amount to the shopping list wanted quantity</comment>
-		</line>
-		<line linenr="015" indent="&#160;">
+		<line linenr="015" indent="&#160;" />
+		<line linenr="016" indent="&#160;">
 			<var>$current</var>
 			<text> </text>
 			<text>=</text>
@@ -99,21 +104,7 @@
 			<var>0</var>
 			<text>]</text>
 		</line>
-		<line linenr="016" indent="&#160;">
-			<var>$menu.item</var>
-			<text>[</text>
-			<var>4</var>
-			<text>]</text>
-			<text> </text>
-			<text>=</text>
-			<text> </text>
-			<var>$current</var>
-		</line>
-		<line linenr="017" indent="&#160;" />
-		<line linenr="018" indent="&#160;&#160;">
-			<comment>* Calculate maximum possible for current list</comment>
-		</line>
-		<line linenr="019" indent="&#160;">
+		<line linenr="017" indent="&#160;">
 			<var>$ware</var>
 			<text> </text>
 			<text>=</text>
@@ -123,7 +114,63 @@
 			<var>1</var>
 			<text>]</text>
 		</line>
-		<line linenr="020" indent="&#160;&#160;">
+		<line linenr="018" indent="&#160;" />
+		<line linenr="019" indent="&#160;">
+			<comment>* Reset current amount to the shopping list wanted quantity</comment>
+		</line>
+		<line linenr="020" indent="&#160;">
+			<var>$menu.item</var>
+			<text>[</text>
+			<var>4</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$current</var>
+		</line>
+		<line linenr="021" indent="&#160;" />
+		<line linenr="022" indent="&#160;">
+			<comment>* Calculate cost of items</comment>
+		</line>
+		<line linenr="023" indent="&#160;">
+			<var>$price.per</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>max</text>
+			<text> </text>
+			<text>price</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>ware</text>
+			<text> </text>
+			<var>$ware</var>
+		</line>
+		<line linenr="024" indent="&#160;">
+			<var>$total.cost</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$total.cost</var>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<text>(</text>
+			<var>$current</var>
+			<text> </text>
+			<text>*</text>
+			<text> </text>
+			<var>$price.per</var>
+			<text>)</text>
+		</line>
+		<line linenr="025" indent="&#160;&#160;" />
+		<line linenr="026" indent="&#160;">
+			<comment>* Calculate maximum possible for current list</comment>
+		</line>
+		<line linenr="027" indent="&#160;&#160;">
 			<text>if</text>
 			<text> </text>
 			<text>is</text>
@@ -135,17 +182,17 @@
 			<text>=</text>
 			<var>$ware</var>
 		</line>
-		<line linenr="021" indent="&#160;&#160;">
+		<line linenr="028" indent="&#160;&#160;">
 			<var>$max</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
 			<var>1</var>
 		</line>
-		<line linenr="022" indent="&#160;">
+		<line linenr="029" indent="&#160;">
 			<text>else</text>
 		</line>
-		<line linenr="023" indent="&#160;" interruptable="@">
+		<line linenr="030" indent="&#160;" interruptable="@">
 			<var>$max</var>
 			<text> </text>
 			<text>=</text>
@@ -173,7 +220,7 @@
 			<text>=</text>
 			<var>$ware</var>
 		</line>
-		<line linenr="024" indent="">
+		<line linenr="031" indent="">
 			<var>$max</var>
 			<text> </text>
 			<text>=</text>
@@ -184,10 +231,10 @@
 			<text> </text>
 			<var>$current</var>
 		</line>
-		<line linenr="025" indent="">
+		<line linenr="032" indent="">
 			<text>end</text>
 		</line>
-		<line linenr="026" indent="">
+		<line linenr="033" indent="">
 			<var>$menu.item</var>
 			<text>[</text>
 			<var>3</var>
@@ -197,11 +244,78 @@
 			<text> </text>
 			<var>$max</var>
 		</line>
-		<line linenr="027" indent="">
+		<line linenr="034" indent="">
 			<text>end</text>
 		</line>
-		<line linenr="028" indent="" />
-		<line linenr="029" indent="">
+		<line linenr="035" indent="" />
+		<line linenr="036" indent="">
+			<comment>* Update the max cost of the shopping list.</comment>
+		</line>
+		<line linenr="037" indent="">
+			<var>$total.cost</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>convert</text>
+			<text> </text>
+			<text>number</text>
+			<text> </text>
+			<var>$total.cost</var>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>string</text>
+		</line>
+		<line linenr="038" indent="">
+			<var>$total.menu.idx</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>size</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$menu</var>
+		</line>
+		<line linenr="039" indent="">
+			<text>dec</text>
+			<text> </text>
+			<var>$total.menu.idx</var>
+		</line>
+		<line linenr="040" indent="">
+			<var>$menu.item</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$menu</var>
+			<text>[</text>
+			<var>$total.menu.idx</var>
+			<text>]</text>
+		</line>
+		<line linenr="041" indent="">
+			<var>$menu.item</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$menu.item</var>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+		</line>
+		<line linenr="042" indent="">
+			<var>$menu.item</var>
+			<text>[</text>
+			<var>3</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$total.cost</var>
+		</line>
+		<line linenr="043" indent="" />
+		<line linenr="044" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>null</var>
@@ -212,55 +326,67 @@
 			<sval type="string" val="plugin.zanzal.shoppingassistant.menu.updatemenumax" />
 			<sval type="int" val="50" />
 			<sval type="string" val="" />
-			<sval type="int" val="1" />
+			<sval type="int" val="17" />
 			<sval type="int" val="0" />
-			<sval type="array" size="11">
+			<sval type="array" size="14">
 				<sval type="string" val="menu" />
 				<sval type="string" val="shopping.list" />
 				<sval type="string" val="shopping.menu.base" />
 				<sval type="string" val="refobj" />
+				<sval type="string" val="total.cost" />
 				<sval type="string" val="shopping.item" />
 				<sval type="string" val="shopping.idx" />
 				<sval type="string" val="menu.item.idx" />
 				<sval type="string" val="menu.item" />
 				<sval type="string" val="current" />
 				<sval type="string" val="ware" />
+				<sval type="string" val="price.per" />
 				<sval type="string" val="max" />
+				<sval type="string" val="total.menu.idx" />
 			</sval>
-			<sval type="array" size="17">
+			<sval type="array" size="26">
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
 				<sval type="array" size="4">
 					<sval type="int" val="131" />
-					<sval type="int" val="5" />
+					<sval type="int" val="6" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="1" />
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610608631" />
+					<sval type="int" val="-1610607863" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="5" />
+					<sval type="int" val="6" />
 					<sval type="int" val="1" />
 					<sval type="int" val="-1" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="143" />
-					<sval type="int" val="5" />
+					<sval type="int" val="6" />
 				</sval>
 				<sval type="array" size="6">
 					<sval type="int" val="129" />
-					<sval type="int" val="4" />
+					<sval type="int" val="5" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="5" />
+					<sval type="int" val="6" />
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="6" />
+					<sval type="int" val="7" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="5" />
+					<sval type="int" val="6" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="2" />
 					<sval type="int" val="15" />
@@ -272,46 +398,75 @@
 				</sval>
 				<sval type="array" size="6">
 					<sval type="int" val="129" />
-					<sval type="int" val="7" />
+					<sval type="int" val="8" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="0" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="6" />
+					<sval type="int" val="7" />
 				</sval>
 				<sval type="array" size="6">
 					<sval type="int" val="129" />
-					<sval type="int" val="8" />
+					<sval type="int" val="9" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="4" />
+					<sval type="int" val="5" />
 					<sval type="int" val="4" />
 					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="129" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="130" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="7" />
+					<sval type="int" val="8" />
 					<sval type="int" val="4" />
 					<sval type="int" val="4" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="8" />
+					<sval type="int" val="9" />
 				</sval>
-				<sval type="array" size="6">
-					<sval type="int" val="129" />
+				<sval type="array" size="4">
+					<sval type="int" val="630" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="21">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="5" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="131074" />
 					<sval type="int" val="9" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="4" />
-					<sval type="int" val="4" />
-					<sval type="int" val="1" />
+					<sval type="int" val="11" />
+					<sval type="int" val="15" />
+					<sval type="int" val="13" />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="7" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="11" />
+					<sval type="int" val="16" />
+					<sval type="int" val="-2" />
+					<sval type="int" val="13" />
+					<sval type="int" val="-3" />
+					<sval type="int" val="17" />
 				</sval>
 				<sval type="array" size="4">
 					<sval type="int" val="1479" />
-					<sval type="int" val="-1610609661" />
+					<sval type="int" val="-1610608893" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="9" />
+					<sval type="int" val="10" />
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="10" />
+					<sval type="int" val="12" />
 					<sval type="int" val="1" />
 					<sval type="int" val="4" />
 					<sval type="int" val="1" />
@@ -320,12 +475,12 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="14" />
+					<sval type="int" val="17" />
 				</sval>
 				<sval type="array" size="12">
 					<sval type="int" val="102" />
 					<sval type="string" val="plugin.zanzal.shopping.getfreecargospaceforware" />
-					<sval type="int" val="10" />
+					<sval type="int" val="12" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="3" />
 					<sval type="int" val="3" />
@@ -334,16 +489,16 @@
 					<sval type="int" val="131074" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="9" />
+					<sval type="int" val="10" />
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="10" />
+					<sval type="int" val="12" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="10" />
+					<sval type="int" val="12" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="8" />
+					<sval type="int" val="9" />
 					<sval type="int" val="15" />
 					<sval type="int" val="11" />
 					<sval type="int" val="3" />
@@ -354,15 +509,56 @@
 				<sval type="array" size="7">
 					<sval type="int" val="130" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="7" />
+					<sval type="int" val="8" />
 					<sval type="int" val="4" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="10" />
+					<sval type="int" val="12" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="1" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="1474" />
+					<sval type="int" val="4" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="131" />
+					<sval type="int" val="13" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="13" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="129" />
+					<sval type="int" val="8" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="13" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="129" />
+					<sval type="int" val="8" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="8" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="130" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="8" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="3">
 					<sval type="int" val="103" />
@@ -388,7 +584,7 @@
 					<sval type="string" val="" />
 				</sval>
 			</sval>
-			<sval type="array" size="14">
+			<sval type="array" size="20">
 				<sval type="array" size="3">
 					<sval type="int" val="0" />
 					<sval type="int" val="1" />
@@ -420,37 +616,63 @@
 					<sval type="string" val="************************************************" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="6" />
+					<sval type="int" val="0" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="7" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="9" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="6" />
+					<sval type="int" val="9" />
 					<sval type="int" val="1" />
 					<sval type="string" val="Reset current amount to the shopping list wanted quantity" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="8" />
+					<sval type="int" val="10" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="8" />
+					<sval type="int" val="10" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Calculate cost of items" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="12" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="12" />
 					<sval type="int" val="1" />
 					<sval type="string" val="Calculate maximum possible for current list" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="12" />
+					<sval type="int" val="15" />
 					<sval type="int" val="5" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="14" />
+					<sval type="int" val="17" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="16" />
+					<sval type="int" val="19" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="16" />
+					<sval type="int" val="19" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="19" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Update the max cost of the shopping list." />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="25" />
 					<sval type="int" val="2" />
 				</sval>
 			</sval>
